@@ -1,9 +1,0 @@
-<?= $this->extend('layouts/template'); ?>
-
-<?= $this->section('content'); ?>
-<div class="container home">
-    <h1>Hello World</h1>
-    <h1>Hello World</h1>
-    <h1>Hello World</h1>
-</div>
-<?= $this->endSection(); ?>

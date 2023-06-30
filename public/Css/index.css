@@ -4,7 +4,9 @@
     --linkcolor : rgb(255, 255, 255);
     
 }
-
+body{
+    overflow-x: hidden ;
+}
 /* Navbar */
 nav{
     position: fixed;
@@ -39,6 +41,25 @@ nav a{
     height: 50px;
     background-color: black;
 }
+
+
+/* Crud Page */
+.list-page{
+    margin: 15px;
+}
+
+.tambah{
+    margin: 25px 0 35px;
+}
+
+.carImg{
+    height: 80px;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+}
+
+/* End Crud Page */
+
 footer{
     background-color: var(--navcolor);
     color: var(--linkcolor);
