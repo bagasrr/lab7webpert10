@@ -17,8 +17,8 @@
             <a href="#">Rental Mobil</a>
         </div>
         <div class="link">
-            <a href="#">Home</a>
-            <a href="#">Catalog</a>
+            <a href="/">Home</a>
+            <a href="/catalog">Catalog</a>
             <a href="#">YouRent</a>
         </div>
     </nav>

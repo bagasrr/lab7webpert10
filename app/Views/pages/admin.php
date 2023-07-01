@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="list-page">
 
-    <a href="/create" type="button" class="btn btn-primary tambah">
+    <a href="/add" type="button" class="btn btn-primary tambah">
         Tambah Penyewa
         <i class="bi bi-plus-lg"></i>
     </a>
@@ -15,6 +15,7 @@
                 <th scope="col">Nama Penyewa</th>
                 <th scope="col">NIk Penyewa</th>
                 <th scope="col">Waktu Penyewaan</th>
+                <th scope="col">Jenis Mobil</th>
                 <th scope="col">No Plat</th>
                 <th scope="col">Gambar</th>
                 <th scope="col">Harga</th>
@@ -29,6 +30,7 @@
                 <td><?= $ds['nama_penyewa']; ?></td>
                 <td><?= $ds['nik_penyewa']; ?></td>
                 <td><?= $ds['waktu_penyewaan']; ?></td>
+                <td><?= $ds['jenis_mobil']; ?></td>
                 <td><?= $ds['no_plat']; ?></td>
                 <td><img src="/img/<?= $ds['gambar_kendaraan']; ?>" class="carImg" alt=""></td>
                 <td>Rp<?= $ds['harga']; ?></td>
