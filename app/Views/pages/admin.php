@@ -7,7 +7,12 @@
         Tambah Penyewa
         <i class="bi bi-plus-lg"></i>
     </a>
-
+    <h1>Data Rental</h1>
+    <?php if (session()->getFlashdata('pesan')): ?>
+    <div class="alert alert-success" role="alert">
+        <?= session()->getFlashData('pesan'); ?>
+    </div>
+    <?php endif; ?>
     <table class="table table-hover text-center align-middle">
         <thead>
             <tr>
@@ -37,14 +42,9 @@
                 <td>
                     <div class="btn btn-info text-white"><?= $ds['jenis_sewa']; ?></div>
                     <div class="btn-group btn2">
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Pending
+                        <button type="button" class="btn btn-success">
+                            Info
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ongoing</a></li>
-                            <li><a class="dropdown-item" href="#">Success</a></li>
-                        </ul>
                     </div>
                 </td>
             </tr>

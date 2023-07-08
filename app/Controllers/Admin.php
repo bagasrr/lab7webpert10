@@ -3,20 +3,20 @@
 namespace App\Controllers;
 
 
-use App\Models\DataMobilModel;
+use App\Models\DataRentalModel;
 
 class Admin extends BaseController
 {
-    protected $dataMobilModel;
+    protected $dataRentalModel;
 
     public function __construct()
     {
-        $this->dataMobilModel = new DataMobilModel();
+        $this->dataRentalModel = new DataRentalModel();
     }
 
     public function index()
     {
-        $dataSewa = $this->dataMobilModel->findAll();
+        $dataSewa = $this->dataRentalModel->findAll();
         $data = [
             'title' => 'Admin Page',
             'dataSewa' => $dataSewa
@@ -36,6 +36,19 @@ class Admin extends BaseController
 
     public function save()
     {
-        dd($this->request->getVar());
+        $this->dataRentalModel->save([
+            'nama_penyewa' => $this->request->getVar('nama_penyewa'),
+            'nik_penyewa' => $this->request->getVar('nik_penyewa'),
+            'waktu_penyewaan' => $this->request->getVar('waktu_penyewaan'),
+            'jenis_mobil' => $this->request->getVar('jenis_mobil'),
+            'no_plat' => $this->request->getVar('no_plat'),
+            'gambar_kendaraan' => $this->request->getVar('gambar_kendaraan'),
+            'harga' => $this->request->getVar('harga'),
+            'jenis_sewa' => $this->request->getVar('jenis_sewa')
+        ]);
+        // dd($this->request->getVar());
+        session()->setFlashdata('pesan', 'Data penyewa berhasil ditambahkan :)');
+
+        return redirect()->to(base_url('cumadminyangtau'));
     }
 }
