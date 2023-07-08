@@ -51,4 +51,17 @@ class Admin extends BaseController
 
         return redirect()->to(base_url('cumadminyangtau'));
     }
+
+    public function delete($id)
+    {
+        
+    }
+
+    public function info()
+    {
+        $data = [
+            'title' => 'Info'
+        ];
+        return view('pages/info', $data);
+    }
 }

@@ -42,9 +42,9 @@
                 <td>
                     <div class="btn btn-info text-white"><?= $ds['jenis_sewa']; ?></div>
                     <div class="btn-group btn2">
-                        <button type="button" class="btn btn-success">
+                        <a href="/datarental/info" type="button" class="btn btn-success">
                             Info
-                        </button>
+                        </a>
                     </div>
                 </td>
             </tr>

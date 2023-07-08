@@ -31,10 +31,12 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/cumadminyangtau', 'Admin::index');
-$routes->post('/cumadminyangtau', 'Admin::index');
 $routes->get('/catalog', 'Pages::catalog');
 $routes->get('/add', 'Admin::add');
 $routes->post('/save', 'Admin::save');
+
+
+$routes->get('/datarental/info', 'Admin::info');
 
 
 /*
