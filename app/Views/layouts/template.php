@@ -18,8 +18,8 @@
         </div>
         <div class="link">
             <a href="/">Home</a>
-            <a href="/catalog">Catalog</a>
-            <a href="#">YouRent</a>
+            <a href="/soon">Catalog</a>
+            <a href="/soon">YouRent</a>
         </div>
     </nav>
     <div class="pembatas"></div>

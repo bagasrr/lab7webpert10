@@ -52,9 +52,11 @@ class Admin extends BaseController
         return redirect()->to(base_url('cumadminyangtau'));
     }
 
-    public function delete($id)
+    public function delete($id = false)
     {
-        
+        $this->dataRentalModel->delete($id);
+        session()->setFlashdata('pesan', 'Data telah dihapus');
+        return redirect()->to(base_url('cumadminyangtau'));
     }
 
     public function info()

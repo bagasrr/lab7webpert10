@@ -2,18 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Models\DataMobilModel;
-
 class Pages extends BaseController
 {
-    protected $dataMobilModel;
-
-    public function __construct()
+    
+    public function soon()
     {
-        $this->dataMobilModel = new DataMobilModel();
-    }
-
-    public function admin()
-    {
+        $data = ['title' => 'soon'];
+        return view ('pages/soon', $data);
     }
 }
