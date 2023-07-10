@@ -49,14 +49,14 @@ class Admin extends BaseController
         // dd($this->request->getVar());
         session()->setFlashdata('pesan', 'Data penyewa berhasil ditambahkan :)');
 
-        return redirect()->to(base_url('cumadminyangtau'));
+        return redirect()->to(base_url('admin'));
     }
 
-    public function delete($id = false)
+    public function delete($id)
     {
         $this->dataRentalModel->delete($id);
         session()->setFlashdata('pesan', 'Data telah dihapus');
-        return redirect()->to(base_url('cumadminyangtau'));
+        return redirect()->to(base_url('admin'));
     }
 
     public function info()

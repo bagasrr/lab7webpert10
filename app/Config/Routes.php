@@ -32,21 +32,23 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'Home::index');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/catalog', 'Pages::catalog');
+
 $routes->get('/add', 'Admin::add');
 $routes->post('/save', 'Admin::save');
+$routes->delete('/delete/(:any)', 'Admin::delete/$1');
+
 
 
 $routes->get('/learnmore', 'Pages::learnmore');
 $routes->get('/soon', 'Pages::soon');
 
 $routes->get('/datarental/info', 'Admin::info');
-$routes->delete('/cumadminyangtau/(:any)', 'Admin::delete/$1');
-$routes->get('/cumadminyangtau/(:any)', 'Admin::delete/$1');
 
 
 /*
 * --------------------------------------------------------------------
 * Additional Routing
+
 * --------------------------------------------------------------------
 *
 * There will often be times that you need additional routing and you

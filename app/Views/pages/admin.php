@@ -41,18 +41,14 @@
                 <td>Rp<?= $ds['harga']; ?></td>
                 <td>
                     <a href="#" class="bi bi-folder2-open btn btn-primary"></a>
-                    <!-- <form action="/cumadminyangtau/delete///$ds['id']; ?>" method="post" class="d-inline">
-                        //csrf_field();
+                    <!-- <a href="/admin/delete/$ds['id']; ?>" class="bi bi-trash-fill btn btn-danger"></a> -->
+                    <!-- <a href="/delete/< $ds['id']; ?>" class="bi bi-trash-fill btn btn-danger"></a> -->
+                    <form action="/delete/<?= $ds['id']; ?>" method="post" class="d-inline">
+                        <?= csrf_field(); ?>
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" href="/datarental/delete/ //$ds['id']; ?>"
-                            class="bi bi-trash-fill btn btn-danger"></button>
-                    </form> -->
-                    <a href="/cumadminyangtau/delete/<?= $ds['id']; ?>" class="bi bi-trash-fill btn btn-danger"></a>
-                    <!-- <div class="btn-group btn2">
-                        <a href="/datarental/info" type="button" class="btn btn-success">
-                            Info
-                        </a>
-                    </div> -->
+                        <button type="submit" class="bi bi-trash-fill btn btn-danger "></button>
+
+                    </form>
                 </td>
             </tr>
             <?php endforeach; ?>
