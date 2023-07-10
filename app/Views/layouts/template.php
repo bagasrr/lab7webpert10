@@ -14,7 +14,7 @@
 <body>
     <nav>
         <div class="logo">
-            <a href="#">Rental Mobil</a>
+            <a href="/">Rental Mobil</a>
         </div>
         <div class="link">
             <a href="/">Home</a>
