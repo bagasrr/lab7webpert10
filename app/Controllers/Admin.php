@@ -59,6 +59,37 @@ class Admin extends BaseController
         return redirect()->to(base_url('admin'));
     }
 
+    public function update($id)
+    {
+        // dd($dataSewa);
+        $data = [
+            'title' => 'Update Data',
+            'dataSewa' => $this->dataRentalModel->getDataRental($id)
+        ];
+        // dd($data);
+        return view('pages/update', $data);
+    }
+
+    public function updateSave()
+    {
+        // dd($this->request->getVar());
+        $this->dataRentalModel->save([
+            'id' => $this->request->getVar('id'),
+            'nama_penyewa' => $this->request->getVar('nama_penyewa'),
+            'nik_penyewa' => $this->request->getVar('nik_penyewa'),
+            'waktu_penyewaan' => $this->request->getVar('waktu_penyewaan'),
+            'jenis_mobil' => $this->request->getVar('jenis_mobil'),
+            'no_plat' => $this->request->getVar('no_plat'),
+            'gambar_kendaraan' => $this->request->getVar('gambar_kendaraan'),
+            'harga' => $this->request->getVar('harga'),
+            'jenis_sewa' => $this->request->getVar('jenis_sewa')
+        ]);
+        // dd($this->request->getVar());
+        session()->setFlashdata('pesan', 'Data Penyewa berhasil diubah :)');
+
+        return redirect()->to(base_url('admin'));
+    }
+
     public function info()
     {
         $data = [

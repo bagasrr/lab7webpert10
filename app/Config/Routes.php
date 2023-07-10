@@ -33,10 +33,16 @@ $routes->get('/', 'Home::index');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/catalog', 'Pages::catalog');
 
-$routes->get('/add', 'Admin::add');
+// portal admin
+$routes->get('/admin/add', 'Admin::add');
 $routes->post('/save', 'Admin::save');
-$routes->delete('/delete/(:any)', 'Admin::delete/$1');
 
+$routes->delete('/admin/delete/(:any)', 'Admin::delete/$1');
+
+$routes->get('/admin/update/(:any)', 'Admin::update/$1');
+$routes->post('/updateSave', 'Admin::updateSave');
+
+// portal Admin eNd
 
 
 $routes->get('/learnmore', 'Pages::learnmore');

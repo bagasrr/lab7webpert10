@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 <div class="list-page">
 
-    <a href="/add" type="button" class="btn btn-primary tambah">
+    <a href="/admin/add" type="button" class="btn btn-primary tambah">
         Tambah Penyewa
         <i class="bi bi-plus-lg"></i>
     </a>
@@ -40,13 +40,14 @@
                 <td><img src="/img/<?= $ds['gambar_kendaraan']; ?>" class="carImg" alt=""></td>
                 <td>Rp<?= $ds['harga']; ?></td>
                 <td>
-                    <a href="#" class="bi bi-folder2-open btn btn-primary"></a>
+                    <a href="/admin/update/<?= $ds['id']; ?>" class="bi bi-folder2-open btn btn-primary"></a>
                     <!-- <a href="/admin/delete/$ds['id']; ?>" class="bi bi-trash-fill btn btn-danger"></a> -->
                     <!-- <a href="/delete/< $ds['id']; ?>" class="bi bi-trash-fill btn btn-danger"></a> -->
-                    <form action="/delete/<?= $ds['id']; ?>" method="post" class="d-inline">
+                    <form action="/admin/delete/<?= $ds['id']; ?>" method="post" class="d-inline">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="bi bi-trash-fill btn btn-danger "></button>
+                        <button type="submit" class="bi bi-trash-fill btn btn-danger "
+                            onclick="return confirm('Apakah anda yakin ingin menghapus ini?')"></button>
 
                     </form>
                 </td>
